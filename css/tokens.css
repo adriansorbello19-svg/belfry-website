@@ -26,13 +26,17 @@
   /* Font families */
   --font-display: "Manrope", system-ui, sans-serif;
   --font-body:    "Inter", system-ui, sans-serif;
-  --font-nav:     "Poppins", system-ui, sans-serif; /* nav bar only, as designed */
 
-  /* Type scale (Figma text styles) */
-  --text-h1-size: 70px;   --text-h1-lh: normal;   /* Hero headline */
-  --text-h2-size: 40px;   --text-h2-lh: normal;   /* H2 — Manrope SemiBold 40 */
-  --text-body-md-size: 18px; --text-body-md-lh: 28px; /* Body - MED */
-  --text-body-sm-size: 16px; --text-body-sm-lh: 24px; /* Body - SML / Bold - SML */
+  /* Type rules (client direction, 2026-11-15)
+     Headings  — Manrope SemiBold (600)
+     Body copy — Inter Regular (400), 16px / 24px, everywhere
+     Labels    — Inter SemiBold (600), 16px / 24px (nav, buttons, tabs, eyebrows) */
+  --weight-heading: 600;
+  --weight-body: 400;
+  --weight-label: 600;
+  --text-h1-size: 70px;   --text-h1-lh: normal;
+  --text-h2-size: 40px;   --text-h2-lh: normal;
+  --text-body-size: 16px; --text-body-lh: 24px;
 
   /* Layout */
   --container-max: 1400px;

@@ -16,22 +16,13 @@ p, h1, h2, h3, ul { margin: 0; }
 button { font: inherit; }
 
 /* ---------- Shared type styles ---------- */
-.t-h1 {
-  font-family: var(--font-display);
-  font-size: var(--text-h1-size);
-  line-height: var(--text-h1-lh);
-  font-weight: 700;
-}
-.t-h1 .t-h1__light { display: block; font-weight: 400; }
-.t-h2 {
-  font-family: var(--font-display);
-  font-size: var(--text-h2-size);
-  line-height: var(--text-h2-lh);
-  font-weight: 600;
-}
-.t-body-md { font-size: var(--text-body-md-size); line-height: var(--text-body-md-lh); font-weight: 400; }
-.t-body-sm { font-size: var(--text-body-sm-size); line-height: var(--text-body-sm-lh); font-weight: 400; }
-.t-bold-sm { font-size: var(--text-body-sm-size); line-height: var(--text-body-sm-lh); font-weight: 600; }
+.t-h1, .t-h2 { font-family: var(--font-display); font-weight: var(--weight-heading); }
+.t-h1 { font-size: var(--text-h1-size); line-height: var(--text-h1-lh); }
+.t-h1 .t-h1__line { display: block; }
+.t-h2 { font-size: var(--text-h2-size); line-height: var(--text-h2-lh); }
+.t-body, .t-label { font-family: var(--font-body); font-size: var(--text-body-size); line-height: var(--text-body-lh); }
+.t-body  { font-weight: var(--weight-body); }
+.t-label { font-weight: var(--weight-label); }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -85,15 +76,11 @@ button { font: inherit; }
   background: rgba(255,255,255,.1);
 }
 .nav__logo img { width: 220px; height: 50px; object-fit: cover; }
-.nav__links {
-  display: flex; gap: 50px; list-style: none; padding: 0;
-  font-family: var(--font-nav); font-weight: 600; font-size: 16px; line-height: normal;
-}
+.nav__links { display: flex; gap: 50px; list-style: none; padding: 0; }
 .nav__links a { color: var(--belfry-white); text-decoration: none; }
 .nav__links a:hover { opacity: .8; }
 .nav__actions { display: flex; align-items: center; gap: 30px; }
 .nav__account img { width: 33.2308px; height: 36px; }
-.nav .btn { font-family: var(--font-nav); font-weight: 600; font-size: 16px; line-height: normal; }
 .nav .btn span { width: 110px; text-align: center; }
 
 .intro {
@@ -227,7 +214,7 @@ button { font: inherit; }
   .tile { padding: 32px; }
 }
 @media (max-width: 760px) {
-  :root { --text-h1-size: 40px; --text-h2-size: 28px; --text-body-md-size: 16px; --text-body-md-lh: 24px; }
+  :root { --text-h1-size: 40px; --text-h2-size: 28px; }
   .scheduling { padding: 0 16px 60px; }
   .hero { gap: 80px; padding: 20px 0 60px; }
   .nav { padding: 14px 20px; }
