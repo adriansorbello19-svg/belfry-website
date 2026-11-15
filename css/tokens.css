@@ -1,9 +1,41 @@
-/* Belfry brand tokens — from Figma swatch */
+/* =========================================================
+   Belfry design tokens — sourced from Figma (Belfry-Website)
+   ========================================================= */
 :root {
+  /* Brand colours (swatch) */
   --belfry-midnight-indigo: #253A8E;
   --belfry-robust-purple:   #4338CA;
   --belfry-pink:            #C9347A;
   --belfry-white:           #FFFFFF;
   --belfry-black:           #000000;
   --belfry-light-grey:      #EBEBEB;
+
+  /* Gradients (Figma styles) */
+  /* Gradient 1 — page backdrop + gradient strokes */
+  --belfry-gradient-1: linear-gradient(105.38deg,
+      var(--belfry-robust-purple) 0%,
+      var(--belfry-midnight-indigo) 56.72%,
+      var(--belfry-pink) 99.94%);
+  /* Fade to light grey that sits over Gradient 1 on page backdrops */
+  --belfry-gradient-fade: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--belfry-light-grey) 90%);
+  /* Gradient 3 — active tab fill */
+  --belfry-gradient-3: linear-gradient(152.91deg,
+      var(--belfry-robust-purple) 0%,
+      var(--belfry-midnight-indigo) 78.33%);
+
+  /* Font families */
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+  --font-nav:     "Poppins", system-ui, sans-serif; /* nav bar only, as designed */
+
+  /* Type scale (Figma text styles) */
+  --text-h1-size: 70px;   --text-h1-lh: normal;   /* Hero headline */
+  --text-h2-size: 40px;   --text-h2-lh: normal;   /* H2 — Manrope SemiBold 40 */
+  --text-body-md-size: 18px; --text-body-md-lh: 28px; /* Body - MED */
+  --text-body-sm-size: 16px; --text-body-sm-lh: 24px; /* Body - SML / Bold - SML */
+
+  /* Layout */
+  --container-max: 1400px;
+  --radius-xl: 30px;
+  --radius-pill: 40px;
 }
