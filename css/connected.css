@@ -205,7 +205,7 @@
   .cta-card__copy { max-width: none; }
 }
 @media (max-width: 760px) {
-  :root { --section-gap: 72px; }
+  :root { --section-gap: 100px; }
   .connected { padding-inline: 16px; padding-bottom: calc(var(--section-gap) - 16px); } /* footer frame is 16px on mobile */
   .section-intro { gap: 20px; }
   .features { gap: 40px; } /* intro → image matches image → carousel */
