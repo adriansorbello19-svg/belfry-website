@@ -21,6 +21,7 @@
 .site-footer__about { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
 .site-footer__logo { width: 339.804px; height: 77px; max-width: 100%; }
 .site-footer address { font-style: normal; }
+.addr-comma { display: none; }
 .site-footer__social { display: flex; gap: 10px; list-style: none; padding: 0; }
 .site-footer__social a { display: block; border-radius: 8px; transition: opacity .15s ease; }
 .site-footer__social a:hover { opacity: .7; }
@@ -47,6 +48,9 @@
   .site-footer { padding: 16px; }
   .site-footer__card { padding: 48px 24px 40px; }
   .site-footer__logo { width: 240px; height: auto; }
+  /* Address on two lines: "1239 Broadway, Suite 703B" / "New York, NY 10001" */
+  .addr-break { display: none; }
+  .addr-comma { display: inline; }
   .site-footer__nav { flex-wrap: wrap; gap: 32px 24px; }
   .site-footer__col { width: calc(50% - 12px); }
 }
