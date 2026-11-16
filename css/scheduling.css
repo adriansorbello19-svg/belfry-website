@@ -186,16 +186,12 @@ button { font: inherit; }
 
 .panel__media {
   flex: none;
+  align-self: center; /* never stretch to the copy column's height — keeps the 640:600 ratio */
   width: 640px; height: 600px;
   border-radius: var(--radius-xl);
   overflow: hidden;
 }
 .panel__media img { width: 100%; height: 100%; object-fit: cover; }
-.panel__media--placeholder {
-  display: grid; place-items: center;
-  border: 2px dashed var(--belfry-light-grey);
-  color: #8a8a8a;
-}
 
 /* Pager — matches tile-pagination asset: 110×33, rx 16.5,
    3px round-capped strokes, 10px gaps, active = 20px */

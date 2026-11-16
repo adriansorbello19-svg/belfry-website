@@ -56,10 +56,10 @@
 
     <div class="tile" data-tabs>
       <div class="tabs" role="tablist" aria-label="Scheduling features">
-        <button class="tab t-label" role="tab" id="tab-scheduling" aria-controls="panel-scheduling" aria-selected="false">
+        <button class="tab t-label" role="tab" id="tab-scheduling" aria-controls="panel-scheduling" aria-selected="true">
           <img class="tab__dot" src="assets/img/dot-tab-active.svg" alt="" width="30" height="30">SCHEDULING
         </button>
-        <button class="tab t-label" role="tab" id="tab-matching" aria-controls="panel-matching" aria-selected="true">
+        <button class="tab t-label" role="tab" id="tab-matching" aria-controls="panel-matching" aria-selected="false">
           <img class="tab__dot" src="assets/img/dot-tab-active.svg" alt="" width="30" height="30">OFFICER MATCHING
         </button>
         <button class="tab t-label" role="tab" id="tab-financial" aria-controls="panel-financial" aria-selected="false">
@@ -71,16 +71,30 @@
       </div>
 
       <div class="panels">
-        <!-- Placeholder — awaiting Figma tile -->
+        <!-- Scheduling (171:4007) -->
         <div class="panel" role="tabpanel" id="panel-scheduling" aria-labelledby="tab-scheduling">
           <div class="panel__copy">
             <div class="panel__text">
-              <h3 class="t-h2">Scheduling tile</h3>
-              <p class="t-body">Placeholder — content to be supplied from Figma.</p>
+              <h3 class="t-h2">Less time scheduling, more time moving forward</h3>
+              <div class="panel__body t-body">
+                <p>Your scheduling team has enough on its plate without spending hours updating spreadsheets, checking availability, or making the same changes across multiple systems.</p>
+                <p>Belfry makes it easy to build and adjust schedules across your sites, with a clear view of who&#39;s working, where they&#39;re needed, and which posts still need coverage.</p>
+              </div>
+              <div>
+                <p class="panel__list-title t-label">Built to keep things moving</p>
+                <ul class="panel__list t-body">
+                  <li>Create and update schedules across multiple sites.</li>
+                  <li>See open posts and assigned officers at a glance.</li>
+                  <li>Make adjustments as staffing needs change.</li>
+                  <li>Give supervisors visibility into upcoming coverage.</li>
+                </ul>
+              </div>
             </div>
             <div class="pager" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
           </div>
-          <div class="panel__media panel__media--placeholder t-body">Image to come</div>
+          <div class="panel__media">
+            <img src="assets/img/scheduling.png" alt="Belfry weekly schedule for Nov 1–7, 2026, showing officer shifts by day and hour from 7AM to 11AM." width="640" height="600">
+          </div>
         </div>
 
         <!-- Officer Matching (171:3665) -->
@@ -110,28 +124,57 @@
           </div>
         </div>
 
-        <!-- Placeholder — awaiting Figma tile -->
+        <!-- Financial Visibility (189:4485) -->
         <div class="panel" role="tabpanel" id="panel-financial" aria-labelledby="tab-financial">
           <div class="panel__copy">
             <div class="panel__text">
-              <h3 class="t-h2">Financial Visibility tile</h3>
-              <p class="t-body">Placeholder — content to be supplied from Figma.</p>
+              <h3 class="t-h2">See the cost before it costs you</h3>
+              <div class="panel__body t-body">
+                <p>See unbilled overtime forecasts update as you build schedules, identify costly assignments, and compare qualified officers before filling an open post.</p>
+                <p>Review labor costs and revenue across your operation, with the ability to lock in pay rates ahead of time. That means fewer surprises and greater control over your profitability.</p>
+              </div>
+              <div>
+                <p class="panel__list-title t-label">Know your numbers before you make the call</p>
+                <ul class="panel__list t-body">
+                  <li>Forecast unbilled overtime before publishing schedules.</li>
+                  <li>Identify officers approaching overtime thresholds.</li>
+                  <li>Review labor costs and revenue across sites.</li>
+                  <li>Lock in pay rates ahead of time.</li>
+                </ul>
+              </div>
             </div>
             <div class="pager" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
           </div>
-          <div class="panel__media panel__media--placeholder t-body">Image to come</div>
+          <div class="panel__media">
+            <img src="assets/img/financial-visibility.png" alt="Belfry schedule forecast showing hours breakdown by regular, holiday, paid overtime and unfilled, plus revenue, direct labor and gross profit." width="640" height="600">
+          </div>
         </div>
 
-        <!-- Placeholder — awaiting Figma tile -->
+        <!-- Communication (189:4512) -->
         <div class="panel" role="tabpanel" id="panel-communication" aria-labelledby="tab-communication">
           <div class="panel__copy">
             <div class="panel__text">
-              <h3 class="t-h2">Communication tile</h3>
-              <p class="t-body">Placeholder — content to be supplied from Figma.</p>
+              <h3 class="t-h2">Keep everyone in the loop without the back-and-forth</h3>
+              <div class="panel__body t-body">
+                <p>You shouldn&#39;t have to spend your day calling officers, chasing confirmations, and relaying schedule changes.</p>
+                <p>Belfry automates routine scheduling communications, sending updates directly to officers by text. Officers respond to available assignments, while your administrators see confirmations when a post is filled.</p>
+                <p>Everyone stays informed, and your team can get on with the work that needs their attention.</p>
+              </div>
+              <div>
+                <p class="panel__list-title t-label">Built to keep things moving</p>
+                <ul class="panel__list t-body">
+                  <li>Create and update schedules across multiple sites.</li>
+                  <li>See open posts and assigned officers at a glance.</li>
+                  <li>Make adjustments as staffing needs change.</li>
+                  <li>Give supervisors visibility into upcoming coverage.</li>
+                </ul>
+              </div>
             </div>
             <div class="pager" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
           </div>
-          <div class="panel__media panel__media--placeholder t-body">Image to come</div>
+          <div class="panel__media">
+            <img src="assets/img/communication.png" alt="Belfry Armed Officer post showing officers who responded to a shift offer, with availability, pay rate and distance, ready to review and assign." width="640" height="600">
+          </div>
         </div>
       </div>
     </div>
