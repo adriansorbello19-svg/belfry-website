@@ -199,6 +199,7 @@
   .connected { gap: 100px; padding-block: 80px; }
   .features__row, .action, .cta-faq { flex-direction: column; align-items: stretch; gap: 40px; }
   .features__media, .action__media { flex: none; width: 100%; }
+  .features__list { flex: none; } /* the 600:750 split is for the side-by-side row only */
   .action__copy { max-width: none; }
   .cta-card { flex: none; }
   .cta-card__copy { max-width: none; }
@@ -207,6 +208,22 @@
   .connected { gap: 72px; padding: 60px 16px; }
   .section-intro { gap: 20px; }
   .feature { padding: 20px; }
+
+  /* Feature cards on mobile: a swipeable carousel, every card open
+     (js/accordion.js) and centre-aligned; next card peeks in at the edge. */
+  .features__list {
+    flex-direction: row; gap: 10px;
+    margin: 0 -16px; padding: 0 16px 4px;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
+    scrollbar-width: none;
+  }
+  .features__list::-webkit-scrollbar { display: none; }
+  .feature {
+    flex: 0 0 calc(100% - 28px);
+    scroll-snap-align: start;
+    text-align: center;
+  }
   .action__copy { gap: 20px; }
   .cta-card { padding: 24px; gap: 30px; }
   .faq { padding: 23px 19px; gap: 20px; }

@@ -25,17 +25,33 @@ document.querySelectorAll('[data-accordion]').forEach((root) => {
     buttons.forEach((o) => set(o, o === current));
     root.style.minHeight = max + 'px';
   }
+  // Mobile (≤760px): the single-open list becomes a carousel with every item
+  // open; the accordion behaviour returns above that width.
+  const mobile = matchMedia('(max-width: 760px)');
+  let current = buttons.find((b) => b.getAttribute('aria-expanded') === 'true') || buttons[0];
+  function layout() {
+    if (!single) return;
+    if (mobile.matches) {
+      root.style.minHeight = '';
+      buttons.forEach((b) => set(b, true));
+    } else {
+      buttons.forEach((b) => set(b, b === current));
+      reserve();
+    }
+  }
   if (single) {
-    reserve();
-    addEventListener('resize', reserve);
-    if (document.fonts) document.fonts.ready.then(reserve);
+    layout();
+    addEventListener('resize', () => { if (!mobile.matches) reserve(); });
+    mobile.addEventListener('change', layout);
+    if (document.fonts) document.fonts.ready.then(layout);
   }
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const open = btn.getAttribute('aria-expanded') === 'true';
       if (single) {
-        if (open) return; // one item always stays open
+        if (open || mobile.matches) return; // one item always stays open; all open on mobile
+        current = btn;
         buttons.forEach((b) => set(b, b === btn));
       } else if (root.dataset.accordion === 'one') {
         buttons.forEach((b) => set(b, b === btn ? !open : false));
