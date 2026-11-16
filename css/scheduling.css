@@ -59,7 +59,7 @@ button { font: inherit; }
 /* ---------- Page backdrop ---------- */
 .scheduling {
   display: flex; flex-direction: column; align-items: center;
-  padding: 0 20px 100px;
+  padding: 0 20px calc(var(--section-gap) / 2); /* + .connected top = one section gap */
   background-image: var(--belfry-gradient-fade), var(--belfry-gradient-1);
   overflow: hidden;
 }
@@ -244,7 +244,7 @@ button { font: inherit; }
 }
 @media (max-width: 760px) {
   :root { --text-h1-size: 40px; --text-h2-size: 28px; }
-  .scheduling { padding: 0 16px 60px; }
+  .scheduling { padding: 0 16px calc(var(--section-gap) / 2); }
   .hero { --nav-top: 16px; --nav-h: 64px; }
   /* Eyebrow: pulsing glow sits centred above the label */
   .eyebrow { flex-direction: column; gap: 8px; }

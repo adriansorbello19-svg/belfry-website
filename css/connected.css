@@ -4,8 +4,8 @@
    Depends on tokens.css + shared helpers in scheduling.css
    ========================================================= */
 .connected {
-  display: flex; flex-direction: column; align-items: center; gap: 160px;
-  padding: 100px 20px;
+  display: flex; flex-direction: column; align-items: center; gap: var(--section-gap);
+  padding: calc(var(--section-gap) / 2) 20px calc(var(--section-gap) - 20px); /* −20px: footer frame */
   background-image: var(--belfry-gradient-features);
   overflow: clip; /* clip, not hidden: hidden would break the sticky CTA below */
 }
@@ -196,7 +196,7 @@
       linear-gradient(180deg, var(--belfry-light-grey) 4%, rgba(0,0,0,0) 40%),
       linear-gradient(138.65deg, var(--belfry-pink) 19.35%, var(--belfry-midnight-indigo) 45.87%, var(--belfry-robust-purple) 80.65%);
   }
-  .connected { gap: 100px; padding-block: 80px; }
+  :root { --section-gap: 100px; }
   .features__row, .action, .cta-faq { flex-direction: column; align-items: stretch; gap: 40px; }
   .features__media, .action__media { flex: none; width: 100%; }
   .features__list { flex: none; } /* the 600:750 split is for the side-by-side row only */
@@ -205,7 +205,8 @@
   .cta-card__copy { max-width: none; }
 }
 @media (max-width: 760px) {
-  .connected { gap: 72px; padding: 60px 16px; }
+  :root { --section-gap: 72px; }
+  .connected { padding-inline: 16px; padding-bottom: calc(var(--section-gap) - 16px); } /* footer frame is 16px on mobile */
   .section-intro { gap: 20px; }
   .feature { padding: 20px; }
 

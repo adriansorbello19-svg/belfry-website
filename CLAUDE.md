@@ -12,6 +12,9 @@ Static HTML/CSS/JS site built section by section from Figma
 - **Labels** (nav, buttons, tabs, eyebrows, list titles): Inter SemiBold (600), 16px / 24px — `.t-label`.
 - No other font families (Figma's Poppins nav was replaced with Inter).
 
+## Spacing
+- Every gap between sections uses `--section-gap` (tokens.css): **160px** desktop, 100px ≤1024px, 72px ≤760px. Gaps across band joins (two halves) and above the footer (minus its frame) add up to the same value.
+
 ## Build workflow per section
 1. Pull design context + screenshot from Figma for the given node; download assets into `assets/img/` (never hotlink figma.com URLs).
 2. Check Figma strokes/fills against the render: the code export drops gradient strokes.
