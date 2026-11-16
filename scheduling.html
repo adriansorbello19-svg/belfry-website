@@ -10,9 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/scheduling.css">
+  <link rel="stylesheet" href="css/connected.css">
 </head>
 <body>
-<main class="scheduling">
+<main>
+<div class="scheduling">
 
   <!-- ===== 1. INTRODUCTION (171:3624) ===== -->
   <section class="hero wrap" aria-labelledby="hero-title">
@@ -179,8 +181,106 @@
       </div>
     </div>
   </section>
+</div>
 
+<!-- ===== 3. FEATURES · COMMERCIAL VALUE · CTA/FAQs (171:3678) ===== -->
+<div class="connected">
+
+  <!-- 3a. Everything works better when it's connected (171:3679) -->
+  <section class="wrap features" aria-labelledby="features-title">
+    <div class="section-intro">
+      <span class="badge"><img src="assets/img/icon-belfry-badge.svg" alt="" width="23.96" height="24"></span>
+      <h2 id="features-title" class="t-h2">Everything works better when it&#39;s connected</h2>
+      <p class="t-body">Scheduling is only one part of running a security business. Belfry brings your workforce and operational information together, helping your team stay informed from the first assignment through to payroll and billing.</p>
+    </div>
+    <div class="features__row">
+      <div class="features__list" data-accordion="single">
+          <div class="feature is-open" data-img="assets/img/connected-dashboard.png">
+            <h3 class="t-h3"><button type="button" class="feature__head" id="feature-supervisors" aria-expanded="true" aria-controls="feature-supervisors-body">Give supervisors the full picture</button></h3>
+            <div class="feature__body t-body" id="feature-supervisors-body" role="region" aria-labelledby="feature-supervisors">Keep site supervisors informed with visibility into upcoming schedules, assigned officers, and coverage requirements.</div>
+          </div>
+          <div class="feature" data-img="assets/img/connected-dashboard.png">
+            <h3 class="t-h3"><button type="button" class="feature__head" id="feature-field" aria-expanded="false" aria-controls="feature-field-body">Know what&#39;s happening in the field</button></h3>
+            <div class="feature__body t-body" id="feature-field-body" role="region" aria-labelledby="feature-field" hidden>Description to come — copy to be supplied.</div>
+          </div>
+          <div class="feature" data-img="assets/img/connected-dashboard.png">
+            <h3 class="t-h3"><button type="button" class="feature__head" id="feature-reporting" aria-expanded="false" aria-controls="feature-reporting-body">Keep reporting close to operations</button></h3>
+            <div class="feature__body t-body" id="feature-reporting-body" role="region" aria-labelledby="feature-reporting" hidden>Description to come — copy to be supplied.</div>
+          </div>
+          <div class="feature" data-img="assets/img/connected-dashboard.png">
+            <h3 class="t-h3"><button type="button" class="feature__head" id="feature-finances" aria-expanded="false" aria-controls="feature-finances-body">Connect your schedules to your finances</button></h3>
+            <div class="feature__body t-body" id="feature-finances-body" role="region" aria-labelledby="feature-finances" hidden>Description to come — copy to be supplied.</div>
+          </div>
+      </div>
+      <div class="features__media">
+        <img src="assets/img/connected-dashboard.png" alt="Belfry dashboard week view for Nov 1–7, 2026, showing shifts by post with assigned officers and open shifts." width="1774" height="887">
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b. See Belfry in action (171:3704) -->
+  <section class="wrap action" aria-labelledby="action-title">
+    <div class="action__media">
+      <img class="action__shot" src="assets/img/belfry-in-action.png" alt="Belfry Armed Officer post listing officers who responded to a shift offer." width="1254" height="1254">
+      <div class="action__overlay" aria-hidden="true">
+        <div class="action__prompt">
+          <span>Assign shift to Dean Winchester</span>
+          <span class="action__confirm">Confirm</span>
+        </div>
+        <span class="action__cursor"><img src="assets/img/cursor-pointer.svg" alt="" width="50.4253" height="41.5034"></span>
+      </div>
+    </div>
+    <div class="action__copy">
+      <span class="badge"><img src="assets/img/icon-belfry-badge.svg" alt="" width="23.96" height="24"></span>
+      <h2 id="action-title" class="t-h2">See Belfry in action</h2>
+      <p class="t-body">From building schedules and finding qualified officers to forecasting overtime and confirming coverage, see how Belfry brings your scheduling process together.</p>
+      <a class="btn t-label" href="#">Take the Full Tour</a>
+    </div>
+  </section>
+
+  <!-- 3c. CTA + FAQs (233:4562) -->
+  <section class="wrap cta-faq">
+    <div class="cta-card">
+      <div class="cta-card__copy">
+        <h2 class="t-h2">Give every shift a better start</h2>
+        <p class="t-body">Bring your scheduling, people, and operations together with software designed to help your security business run at its best.</p>
+      </div>
+      <a class="btn btn--gradient t-label" href="#">Book a Demo</a>
+    </div>
+    <div class="faq gradient-stroke" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="t-h2">Frequently asked questions</h2>
+      <div class="faq__list" data-accordion="multi">
+            <div class="faq__item">
+              <h3 class="faq__q"><button type="button" id="faq-1" aria-expanded="false" aria-controls="faq-1-a"><span>How does Belfry decide which officer to offer a shift to?</span><img src="assets/img/icon-plus.svg" alt="" width="26" height="26"></button></h3>
+              <div class="faq__a t-body" id="faq-1-a" role="region" aria-labelledby="faq-1" hidden>Answer to come — copy to be supplied.</div>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__q"><button type="button" id="faq-2" aria-expanded="false" aria-controls="faq-2-a"><span>How fast can we fill a call-off?</span><img src="assets/img/icon-plus.svg" alt="" width="26" height="26"></button></h3>
+              <div class="faq__a t-body" id="faq-2-a" role="region" aria-labelledby="faq-2" hidden>Answer to come — copy to be supplied.</div>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__q"><button type="button" id="faq-3" aria-expanded="false" aria-controls="faq-3-a"><span>Can we see overtime before we publish the schedule?</span><img src="assets/img/icon-plus.svg" alt="" width="26" height="26"></button></h3>
+              <div class="faq__a t-body" id="faq-3-a" role="region" aria-labelledby="faq-3" hidden>Answer to come — copy to be supplied.</div>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__q"><button type="button" id="faq-4" aria-expanded="false" aria-controls="faq-4-a"><span>How do officers find out about schedule changes?</span><img src="assets/img/icon-plus.svg" alt="" width="26" height="26"></button></h3>
+              <div class="faq__a t-body" id="faq-4-a" role="region" aria-labelledby="faq-4" hidden>Answer to come — copy to be supplied.</div>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__q"><button type="button" id="faq-5" aria-expanded="false" aria-controls="faq-5-a"><span>How much does it cost?</span><img src="assets/img/icon-plus.svg" alt="" width="26" height="26"></button></h3>
+              <div class="faq__a t-body" id="faq-5-a" role="region" aria-labelledby="faq-5" hidden>Answer to come — copy to be supplied.</div>
+            </div>
+            <div class="faq__item">
+              <h3 class="faq__q"><button type="button" id="faq-6" aria-expanded="false" aria-controls="faq-6-a"><span>How does the setup work?</span><img src="assets/img/icon-plus.svg" alt="" width="26" height="26"></button></h3>
+              <div class="faq__a t-body" id="faq-6-a" role="region" aria-labelledby="faq-6" hidden>Answer to come — copy to be supplied.</div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+</div>
 </main>
 <script src="js/tabs.js"></script>
+<script src="js/accordion.js"></script>
 </body>
 </html>
