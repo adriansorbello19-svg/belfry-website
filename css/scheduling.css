@@ -151,11 +151,25 @@ button { font: inherit; }
   background: var(--belfry-gradient-3);
   color: var(--belfry-white);
 }
+/* Active tab stroke: brand gradient (purple → indigo → pink) as a conic
+   gradient whose start angle spins, so the colours travel clockwise around
+   the pill. Browsers without @property show the same gradient, static. */
+@property --tab-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes tab-stroke-spin { to { --tab-angle: 360deg; } }
 .tab[aria-selected="true"]::before {
   content: ""; position: absolute; inset: -1px;
   padding: var(--stroke);
   border-radius: inherit;
-  background: var(--belfry-gradient-1);
+  background: conic-gradient(from var(--tab-angle),
+      var(--belfry-robust-purple) 0%,
+      var(--belfry-midnight-indigo) 35%,
+      var(--belfry-pink) 70%,
+      var(--belfry-robust-purple) 100%);
+  animation: tab-stroke-spin 4s linear infinite;
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
@@ -244,4 +258,5 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .panel, .pager span, .btn, .tab { transition: none; }
   .eyebrow img { animation: none; }
+  .tab[aria-selected="true"]::before { animation: none; }
 }
