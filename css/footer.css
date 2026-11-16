@@ -46,7 +46,7 @@
 }
 @media (max-width: 760px) {
   .site-footer { padding: 16px; }
-  .site-footer__card { padding: 48px 24px 40px; }
+  .site-footer__card { padding: 24px; } /* 24px on every side */
   .site-footer__logo { width: 240px; height: auto; }
   /* Address on two lines: "1239 Broadway, Suite 703B" / "New York, NY 10001" */
   .addr-break { display: none; }
