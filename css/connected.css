@@ -7,7 +7,7 @@
   display: flex; flex-direction: column; align-items: center; gap: 160px;
   padding: 100px 20px;
   background-image: var(--belfry-gradient-features);
-  overflow: hidden;
+  overflow: clip; /* clip, not hidden: hidden would break the sticky CTA below */
 }
 
 /* Shared: pink 40px icon badge */
@@ -136,6 +136,11 @@
   border-radius: var(--radius-xl);
   background: var(--belfry-white);
   color: var(--belfry-black);
+}
+/* Desktop: CTA card pins while the FAQ panel scrolls past. It starts aligned
+   to the FAQ top and, being confined to the row, ends aligned to its bottom. */
+@media (min-width: 1025px) {
+  .cta-card { position: sticky; top: 30px; }
 }
 .cta-card__copy { display: flex; flex-direction: column; gap: 30px; max-width: 353px; }
 
