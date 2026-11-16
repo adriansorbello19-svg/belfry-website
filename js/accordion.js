@@ -1,6 +1,8 @@
 // Accordions.
-// data-accordion="single": exactly one item open (feature list).
-// data-accordion="multi": items toggle independently (FAQs).
+// data-accordion="single": exactly one item always open (feature list).
+// data-accordion="one":    at most one item open; opening one closes the rest,
+//                          and the open one can be closed (FAQs).
+// data-accordion="multi":  items toggle independently.
 document.querySelectorAll('[data-accordion]').forEach((root) => {
   const single = root.dataset.accordion === 'single';
   const buttons = [...root.querySelectorAll('button[aria-controls]')];
@@ -35,6 +37,8 @@ document.querySelectorAll('[data-accordion]').forEach((root) => {
       if (single) {
         if (open) return; // one item always stays open
         buttons.forEach((b) => set(b, b === btn));
+      } else if (root.dataset.accordion === 'one') {
+        buttons.forEach((b) => set(b, b === btn ? !open : false));
       } else {
         set(btn, !open);
       }

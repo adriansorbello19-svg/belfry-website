@@ -131,7 +131,7 @@
 .cta-faq { display: flex; align-items: flex-start; gap: 50px; }
 .cta-card {
   flex: 0 0 440px;
-  display: flex; flex-direction: column; align-items: flex-start; gap: 50px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 30px;
   padding: 30px;
   border-radius: var(--radius-xl);
   background: var(--belfry-white);
@@ -140,7 +140,9 @@
 /* Desktop: CTA card pins while the FAQ panel scrolls past. It starts aligned
    to the FAQ top and, being confined to the row, ends aligned to its bottom. */
 @media (min-width: 1025px) {
-  .cta-card { position: sticky; top: 30px; }
+  /* Pins with its centre at the middle of the screen (--cta-h set by
+     js/sticky-cta.js); never closer than 30px to the top on short screens. */
+  .cta-card { position: sticky; top: max(30px, calc(50vh - var(--cta-h, 352px) / 2)); }
 }
 .cta-card__copy { display: flex; flex-direction: column; gap: 30px; max-width: 353px; }
 
@@ -206,7 +208,7 @@
   .section-intro { gap: 20px; }
   .feature { padding: 20px; }
   .action__copy { gap: 20px; }
-  .cta-card { padding: 24px; gap: 32px; }
+  .cta-card { padding: 24px; gap: 30px; }
   .faq { padding: 23px 19px; gap: 20px; }
   .faq__q { font-size: 17px; }
   .faq__item { --faq-pad-x: 24px; --faq-icon-gap: 16px; padding-block: 16px; gap: 12px; }
