@@ -31,16 +31,16 @@
 .section-intro p { max-width: 1004px; }
 
 .features__row { display: flex; align-items: center; gap: 50px; }
+/* Columns share the row 600:750 (Figma) at every width, so the list is never squeezed */
 .features__list {
-  flex: 1 1 0; min-width: 0; align-self: stretch;
+  flex: 600 1 0; min-width: 0; align-self: stretch;
   display: flex; flex-direction: column; gap: 10px;
 }
 .feature {
   --stroke: 2px;
   position: relative;
   display: flex; flex-direction: column; gap: 10px;
-  padding: 32px;                 /* 30px + 2px gradient stroke */
-  min-height: 100px;
+  padding: 30px;                 /* same 30px on every side, open or closed */
   border-radius: 20px;
   color: var(--belfry-black);
   transition: background-color .2s ease;
@@ -55,7 +55,6 @@
 }
 .feature:not(.is-open):hover { background: rgba(255,255,255,.18); }
 .feature.is-open {
-  padding: 30px;
   background: linear-gradient(140.81deg, var(--belfry-robust-purple) 0%, var(--belfry-midnight-indigo) 78.33%);
   color: var(--belfry-white);
 }
@@ -71,7 +70,7 @@
 .feature:has(.feature__head:focus-visible) { outline: 2px solid var(--belfry-pink); outline-offset: 3px; }
 
 .features__media {
-  flex: 0 1 750px; min-width: 0;
+  flex: 750 1 0; min-width: 0;
   aspect-ratio: 750 / 484;
   position: relative; overflow: hidden;
   border-radius: var(--radius-xl);
@@ -200,8 +199,7 @@
 @media (max-width: 760px) {
   .connected { gap: 72px; padding: 60px 16px; }
   .section-intro { gap: 20px; }
-  .feature { padding: 22px; min-height: 0; }
-  .feature.is-open { padding: 20px; }
+  .feature { padding: 20px; }
   .action__copy { gap: 20px; }
   .cta-card { padding: 24px; gap: 32px; }
   .faq { padding: 23px 19px; gap: 20px; }
