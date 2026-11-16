@@ -175,6 +175,14 @@
 }
 @media (max-width: 1024px) {
   :root { --text-h3-size: 22px; }
+  /* Stacked layout puts the FAQ lower in the section: push the light fade
+     further down so the white FAQ title keeps ≥3:1 contrast. */
+  .connected {
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0) 80%, var(--belfry-light-grey) 100%),
+      linear-gradient(180deg, var(--belfry-light-grey) 4%, rgba(0,0,0,0) 40%),
+      linear-gradient(138.65deg, var(--belfry-pink) 19.35%, var(--belfry-midnight-indigo) 45.87%, var(--belfry-robust-purple) 80.65%);
+  }
   .connected { gap: 100px; padding-block: 80px; }
   .features__row, .action, .cta-faq { flex-direction: column; align-items: stretch; gap: 40px; }
   .features__media, .action__media { flex: none; width: 100%; }

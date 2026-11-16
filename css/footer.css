@@ -1,0 +1,53 @@
+/* =========================================================
+   Footer — Figma node 171:3766
+   Sits on light grey (the bottom tone of the section above).
+   ========================================================= */
+.site-footer { padding: 20px; background: var(--belfry-light-grey); }
+.site-footer__card {
+  padding: 80px max(40px, calc((100% - var(--container-max)) / 2)) 60px;
+  border-radius: var(--radius-xl);
+  background: var(--belfry-white);
+}
+.site-footer__inner {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 60px;
+  max-width: var(--container-max); margin: 0 auto;
+}
+.site-footer__brand {
+  flex: 0 1 550px; min-width: 0; align-self: stretch;
+  display: flex; flex-direction: column; gap: 50px;
+  color: var(--belfry-black);
+}
+.site-footer__brand > p { color: var(--belfry-black); }
+.site-footer__about { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.site-footer__logo { width: 339.804px; height: 77px; max-width: 100%; }
+.site-footer address { font-style: normal; }
+.site-footer__social { display: flex; gap: 10px; list-style: none; padding: 0; }
+.site-footer__social a { display: block; border-radius: 8px; transition: opacity .15s ease; }
+.site-footer__social a:hover { opacity: .7; }
+.site-footer__social img { width: 36px; height: 36px; }
+
+.site-footer__nav { display: flex; gap: 30px; }
+.site-footer__col { width: 160px; display: flex; flex-direction: column; gap: 10px; color: var(--belfry-midnight-indigo); }
+.site-footer__col h2 { margin: 0; padding-bottom: 10px; border-bottom: 1px solid var(--belfry-robust-purple); }
+.site-footer__col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.site-footer__col a { color: var(--belfry-midnight-indigo); text-decoration: none; }
+.site-footer__col a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.site-footer__col a[aria-current="page"] { color: var(--belfry-robust-purple); }
+.site-footer a:focus-visible { outline: 2px solid var(--belfry-pink); outline-offset: 3px; border-radius: 4px; }
+
+@media (max-width: 1024px) {
+  .site-footer__inner { flex-direction: column; gap: 48px; }
+  /* Stacked: brand block → link columns → copyright last */
+  .site-footer__brand { display: contents; }
+  .site-footer__about { order: 1; }
+  .site-footer__nav { order: 2; }
+  .site-footer__brand > p { order: 3; }
+}
+@media (max-width: 760px) {
+  .site-footer { padding: 16px; }
+  .site-footer__card { padding: 48px 24px 40px; }
+  .site-footer__logo { width: 240px; height: auto; }
+  .site-footer__nav { flex-wrap: wrap; gap: 32px 24px; }
+  .site-footer__col { width: calc(50% - 12px); }
+}
+@media (prefers-reduced-motion: reduce) { .site-footer__social a { transition: none; } }

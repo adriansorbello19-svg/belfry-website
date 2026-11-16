@@ -25,7 +25,9 @@
       var(--belfry-pink) 99.94%);
   /* Features backdrop: light grey fades over a pink → indigo → purple diagonal */
   --belfry-gradient-features:
-      linear-gradient(180deg, rgba(0,0,0,0) 39.69%, var(--belfry-light-grey) 93.97%),
+      /* bottom fade shifted down from Figma's 39.69% → 93.97% so the FAQ title
+         sits on a darker tone (white title contrast 2.6:1 → 4.2:1) */
+      linear-gradient(180deg, rgba(0,0,0,0) 55%, var(--belfry-light-grey) 100%),
       linear-gradient(180deg, var(--belfry-light-grey) 7.07%, rgba(0,0,0,0) 60.71%),
       linear-gradient(138.65deg, var(--belfry-pink) 19.35%, var(--belfry-midnight-indigo) 45.87%, var(--belfry-robust-purple) 80.65%);
   /* Gradient 3 — active tab fill */
