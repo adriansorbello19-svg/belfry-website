@@ -246,6 +246,8 @@ button { font: inherit; }
   :root { --text-h1-size: 40px; --text-h2-size: 28px; }
   .scheduling { padding: 0 16px calc(var(--section-gap) / 2); }
   .hero { --nav-top: 16px; --nav-h: 64px; }
+  /* Body copy steps down to 15/22 on mobile (labels stay 16/24) */
+  .t-body { font-size: 15px; line-height: 22px; }
   /* Eyebrow: pulsing glow sits centred above the label */
   .eyebrow { flex-direction: column; gap: 8px; }
   .nav { padding: 0 12px 0 20px; }
