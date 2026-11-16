@@ -225,6 +225,10 @@
     text-align: center;
   }
   .action__copy { gap: 20px; }
+  /* "See Belfry in action": centred, copy first, image last */
+  .action__copy { order: -1; align-items: center; text-align: center; }
+  /* CTA card: centred */
+  .cta-card { align-items: center; text-align: center; }
   .cta-card { padding: 24px; gap: 30px; }
   .faq { padding: 23px 19px; gap: 20px; }
   .faq__q { font-size: 17px; }
