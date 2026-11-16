@@ -17,8 +17,8 @@ button { font: inherit; }
 
 /* ---------- Shared type styles ---------- */
 .t-h1, .t-h2 { font-family: var(--font-display); font-weight: var(--weight-heading); }
-.t-h1 { font-size: var(--text-h1-size); line-height: var(--text-h1-lh); }
-.t-h1 .t-h1__line { display: block; }
+.t-h1 { font-size: var(--text-h1-size); line-height: var(--text-h1-lh); font-weight: var(--weight-h1-strong); }
+.t-h1 .t-h1__light { display: block; font-weight: var(--weight-h1-light); }
 .t-h2 { font-size: var(--text-h2-size); line-height: var(--text-h2-lh); }
 .t-body, .t-label { font-family: var(--font-body); font-size: var(--text-body-size); line-height: var(--text-body-lh); }
 .t-body  { font-weight: var(--weight-body); }

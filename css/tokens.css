@@ -28,10 +28,13 @@
   --font-body:    "Inter", system-ui, sans-serif;
 
   /* Type rules (client direction, 2026-11-15)
-     Headings  — Manrope SemiBold (600)
+     H1        — Manrope two-weight: line 1 Bold (700), line 2 Regular (400)
+     H2 + below— Manrope SemiBold (600), H2 = 40px
      Body copy — Inter Regular (400), 16px / 24px, everywhere
      Labels    — Inter SemiBold (600), 16px / 24px (nav, buttons, tabs, eyebrows) */
   --weight-heading: 600;
+  --weight-h1-strong: 700;
+  --weight-h1-light: 400;
   --weight-body: 400;
   --weight-label: 600;
   --text-h1-size: 70px;   --text-h1-lh: normal;
