@@ -222,7 +222,7 @@
     object-fit: cover; object-position: left top;
   }
   .features__list {
-    flex-direction: row; gap: 10px;
+    flex-direction: row; gap: 8px;
     margin: 0 -16px; padding: 0 16px 4px;
     overflow-x: auto; overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory; scroll-padding-inline: 16px;
@@ -230,7 +230,7 @@
   }
   .features__list::-webkit-scrollbar { display: none; }
   .feature {
-    flex: 0 0 calc(100% - 28px);
+    flex: 0 0 100%; /* next card peeks in by 8px (16px side padding − 8px gap), as the demo tiles */
     scroll-snap-align: start;
     text-align: center;
   }

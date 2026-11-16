@@ -313,7 +313,7 @@ button { font: inherit; }
   .panels::-webkit-scrollbar { display: none; }
   .panel {
     grid-area: auto;
-    flex: 0 0 calc(100% - 28px); /* next card peeks in by ~16px */
+    flex: 0 0 100%; /* next card peeks in by 8px (20px side padding − 12px gap) */
     visibility: visible; opacity: 1;
     gap: 20px; padding: 16px;
     border: 1px solid var(--belfry-light-grey);
@@ -322,7 +322,7 @@ button { font: inherit; }
   }
   .panel__copy { flex: 1 1 auto; }
   .panel__media { border-radius: 12px; }
-  .panel .t-h2 { font-size: 24px; }
+  .panel .t-h2 { font-size: var(--text-h3-size); line-height: var(--text-h3-lh); } /* tile titles match H3 (22px) on mobile */
 }
 /* Very short screens: tighten the intro so section 1 still fits in one screen. */
 @media (max-height: 600px) and (min-width: 761px) {
