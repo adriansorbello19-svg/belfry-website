@@ -323,6 +323,7 @@ button { font: inherit; }
   .panel__copy { flex: 1 1 auto; }
   .panel__media { border-radius: 12px; }
   .panel .t-h2 { font-size: var(--text-h3-size); line-height: var(--text-h3-lh); } /* tile titles match H3 (22px) on mobile */
+  .panel .t-body { font-size: 14px; line-height: 20px; } /* demo tile body copy + bullets: 14/20 on mobile */
 }
 /* Very short screens: tighten the intro so section 1 still fits in one screen. */
 @media (max-height: 600px) and (min-width: 761px) {
