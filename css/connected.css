@@ -211,6 +211,14 @@
 
   /* Feature cards on mobile: a swipeable carousel, every card open
      (js/accordion.js) and centre-aligned; next card peeks in at the edge. */
+  /* Dashboard image: square, above the carousel, cropped (not stretched)
+     from the top-left corner */
+  .features__media { order: -1; aspect-ratio: 1 / 1; }
+  .features__media img {
+    position: absolute; inset: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: left top;
+  }
   .features__list {
     flex-direction: row; gap: 10px;
     margin: 0 -16px; padding: 0 16px 4px;
