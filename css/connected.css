@@ -249,6 +249,7 @@
   .faq { padding: 23px 19px; gap: 20px; }
   .faq__q { font-size: 17px; }
   .faq__item { --faq-pad-x: 24px; --faq-icon-gap: 16px; padding-block: 16px; gap: 12px; }
+  .faq__a.t-body { font-size: 14px; line-height: 20px; } /* FAQ answers: 14/20 on mobile */
 }
 @media (prefers-reduced-motion: reduce) {
   .feature, .faq__icon img { transition: none; }

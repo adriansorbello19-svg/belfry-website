@@ -8,7 +8,8 @@ Static HTML/CSS/JS site built section by section from Figma
 - **H1:** Manrope, two weights — first line Bold (700), second line Regular (400) via `<span class="t-h1__light">`. Size 70px.
 - **H2 and other headings:** Manrope SemiBold (600); H2 is 40px — `.t-h2`; H3 is 26px — `.t-h3`. FAQ questions also SemiBold (Figma's Bold not used). Figma's 42px "Header 2" is set as H2 40px.
 - **Body copy:** Inter Regular (400), **16px (px, not pt) / 24px**, and **15px / 22px on mobile (≤760px)** — `.t-body`. If Figma shows another body size, use 16px and mention the difference to the user.
-- **Footer small print** (address, copyright, footer links): Inter Regular 14px / 20px — `.t-small`. The only exception to 16px body.
+- **Footer small print** (address, copyright, footer links): Inter Regular 14px / 20px — `.t-small`.
+- **FAQ answers on mobile (≤760px):** 14px / 20px (body copy elsewhere on mobile is 15px).
 - **Labels** (nav, buttons, tabs, eyebrows, list titles): Inter SemiBold (600), 16px / 24px, **15px / 22px on mobile (≤760px)** — `.t-label`.
 - No other font families (Figma's Poppins nav was replaced with Inter).
 
