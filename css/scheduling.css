@@ -64,9 +64,8 @@ button { font: inherit; }
 .wrap { width: 100%; max-width: var(--container-max); }
 
 /* ---------- Hero ---------- */
-/* Hero fills exactly one screen. Bottom padding mirrors the space the nav takes
-   at the top (nav offset + nav height), so the intro block sits at the true
-   vertical centre of the viewport, not just the space below the nav. */
+/* Hero fills exactly one screen. The intro block is centred in the space
+   between the bottom of the nav and the fold. */
 .hero {
   --nav-top: 30px;
   --nav-h: 80px;                 /* 20px padding + 40px logo/CTA + 20px padding */
@@ -74,7 +73,7 @@ button { font: inherit; }
   grid-template-rows: auto 1fr;
   min-height: 100vh;
   min-height: 100svh;
-  padding: var(--nav-top) 0 calc(var(--nav-top) + var(--nav-h));
+  padding: var(--nav-top) 0 0;
 }
 .hero > .intro { align-self: center; }
 .nav {
@@ -240,9 +239,8 @@ button { font: inherit; }
   .tile { padding: 20px; gap: 28px; }
   .tab { flex-basis: 100%; padding: 0 16px; }
 }
-/* Short laptop screens (e.g. 1366×768 with browser chrome): tighten the intro
-   so section 1 still fits in one screen with section 2 below the fold. */
-@media (max-height: 700px) and (min-width: 761px) {
+/* Very short screens: tighten the intro so section 1 still fits in one screen. */
+@media (max-height: 600px) and (min-width: 761px) {
   .intro { gap: 32px; }
 }
 @media (prefers-reduced-motion: reduce) {
