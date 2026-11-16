@@ -144,7 +144,7 @@
   --stroke: 3px;
   flex: 1 1 0; min-width: 0;
   display: flex; flex-direction: column; gap: 30px;
-  padding: 53px;                 /* 50px + 3px gradient stroke */
+  padding: 33px;                 /* 30px + 3px gradient stroke */
   border-radius: var(--radius-xl);
   color: var(--belfry-white);
 }
