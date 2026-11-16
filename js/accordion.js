@@ -1,11 +1,9 @@
 // Accordions.
-// data-accordion="single": exactly one item open (feature list); also swaps the
-//   paired media image when an item carries data-img.
+// data-accordion="single": exactly one item open (feature list).
 // data-accordion="multi": items toggle independently (FAQs).
 document.querySelectorAll('[data-accordion]').forEach((root) => {
   const single = root.dataset.accordion === 'single';
   const buttons = [...root.querySelectorAll('button[aria-controls]')];
-  const media = single ? root.parentElement.querySelector('.features__media img') : null;
 
   function set(btn, open) {
     btn.setAttribute('aria-expanded', open);
@@ -37,8 +35,6 @@ document.querySelectorAll('[data-accordion]').forEach((root) => {
       if (single) {
         if (open) return; // one item always stays open
         buttons.forEach((b) => set(b, b === btn));
-        const src = btn.closest('[data-img]')?.dataset.img;
-        if (media && src && !media.src.endsWith(src)) media.src = src;
       } else {
         set(btn, !open);
       }

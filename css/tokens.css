@@ -53,6 +53,7 @@
   --text-h2-size: 40px;   --text-h2-lh: normal;
   --text-h3-size: 26px;   --text-h3-lh: normal;
   --text-body-size: 16px; --text-body-lh: 24px;
+  --text-small-size: 14px; --text-small-lh: 20px; /* footer small print only */
 
   /* Layout */
   --container-max: 1400px;

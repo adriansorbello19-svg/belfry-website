@@ -23,6 +23,7 @@ button { font: inherit; }
 .t-h3 { font-family: var(--font-display); font-weight: var(--weight-heading); font-size: var(--text-h3-size); line-height: var(--text-h3-lh); }
 .t-body, .t-label { font-family: var(--font-body); font-size: var(--text-body-size); line-height: var(--text-body-lh); }
 .t-body  { font-weight: var(--weight-body); }
+.t-small { font-family: var(--font-body); font-weight: var(--weight-body); font-size: var(--text-small-size); line-height: var(--text-small-lh); }
 .t-label { font-weight: var(--weight-label); }
 
 /* ---------- Buttons ---------- */
