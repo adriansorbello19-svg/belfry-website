@@ -208,6 +208,7 @@
   :root { --section-gap: 72px; }
   .connected { padding-inline: 16px; padding-bottom: calc(var(--section-gap) - 16px); } /* footer frame is 16px on mobile */
   .section-intro { gap: 20px; }
+  .features { gap: 40px; } /* intro → image matches image → carousel */
   .feature { padding: 20px; }
 
   /* Feature cards on mobile: a swipeable carousel, every card open
