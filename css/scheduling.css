@@ -290,6 +290,30 @@ button { font: inherit; }
   .demo__intro { padding: 14px 8px 0; gap: 16px; } /* 24px above + 24px gap below */
   .tile { padding: 20px; gap: 28px; }
   .tab { flex-basis: 100%; padding: 0 16px; }
+
+  /* Demo tiles on mobile: no tabs — the four tiles become a swipeable
+     carousel of equal-height cards (next card peeks in at the edge). */
+  .tabs { display: none; }
+  .panels {
+    display: flex; gap: 12px;
+    margin: 0 -20px; padding: 0 20px 4px;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 20px;
+    scrollbar-width: none;
+  }
+  .panels::-webkit-scrollbar { display: none; }
+  .panel {
+    grid-area: auto;
+    flex: 0 0 calc(100% - 28px); /* next card peeks in by ~16px */
+    visibility: visible; opacity: 1;
+    gap: 20px; padding: 16px;
+    border: 1px solid var(--belfry-light-grey);
+    border-radius: 20px;
+    scroll-snap-align: start;
+  }
+  .panel__copy { flex: 1 1 auto; }
+  .panel__media { border-radius: 12px; }
+  .panel .t-h2 { font-size: 24px; }
 }
 /* Smallest phones (<380px): keep clear space between the logo and the actions */
 /* Smallest phones (<380px): no room for logo + CTA + menu, so the bar CTA
