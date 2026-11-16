@@ -64,23 +64,34 @@ button { font: inherit; }
 .wrap { width: 100%; max-width: var(--container-max); }
 
 /* ---------- Hero ---------- */
+/* Hero fills exactly one screen. Bottom padding mirrors the space the nav takes
+   at the top (nav offset + nav height), so the intro block sits at the true
+   vertical centre of the viewport, not just the space below the nav. */
 .hero {
-  display: flex; flex-direction: column; gap: 200px;
-  min-height: 1000px;
-  padding: 50px 0 100px;
+  --nav-top: 30px;
+  --nav-h: 80px;                 /* 20px padding + 40px logo/CTA + 20px padding */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: var(--nav-top) 0 calc(var(--nav-top) + var(--nav-h));
 }
+.hero > .intro { align-self: center; }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 20px 40px;
+  height: var(--nav-h);
+  padding: 0 40px;
   border-radius: 50px;
   background: rgba(255,255,255,.1);
 }
-.nav__logo img { width: 220px; height: 50px; object-fit: cover; }
+/* Logo: fixed 40px height, width from the image's own ratio (699×159) */
+.nav__logo img { height: 40px; width: auto; }
 .nav__links { display: flex; gap: 50px; list-style: none; padding: 0; }
 .nav__links a { color: var(--belfry-white); text-decoration: none; }
 .nav__links a:hover { opacity: .8; }
 .nav__actions { display: flex; align-items: center; gap: 30px; }
 .nav__account img { width: 33.2308px; height: 36px; }
+.nav .btn { height: 40px; padding: 8px 24px; } /* matches logo height */
 .nav .btn span { width: 110px; text-align: center; }
 
 .intro {
@@ -89,7 +100,11 @@ button { font: inherit; }
   color: var(--belfry-white); text-align: center;
 }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; }
-.eyebrow img { width: 24px; height: 24px; }
+.eyebrow img { width: 24px; height: 24px; animation: glow-pulse 2s ease-in-out infinite; }
+@keyframes glow-pulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%      { opacity: .15; transform: scale(.7); }
+}
 .intro__body { max-width: 700px; }
 
 /* ---------- Demo section ---------- */
@@ -205,7 +220,6 @@ button { font: inherit; }
 }
 @media (max-width: 1024px) {
   :root { --text-h1-size: 56px; --text-h2-size: 34px; }
-  .hero { gap: 120px; min-height: 0; }
   .nav__links { gap: 28px; }
   .tabs { height: auto; flex-wrap: wrap; }
   .tab { flex: 1 1 calc(50% - 5px); height: 50px; }
@@ -216,16 +230,22 @@ button { font: inherit; }
 @media (max-width: 760px) {
   :root { --text-h1-size: 40px; --text-h2-size: 28px; }
   .scheduling { padding: 0 16px 60px; }
-  .hero { gap: 80px; padding: 20px 0 60px; }
-  .nav { padding: 14px 20px; }
+  .hero { --nav-top: 16px; --nav-h: 64px; }
+  .nav { padding: 0 12px 0 20px; }
+  .nav__logo img { height: 32px; }
   .nav__links, .nav__account { display: none; }
-  .nav__logo img { width: 154px; height: 35px; }
   .intro { gap: 32px; }
   .demo { padding: 13px; gap: 24px; }
   .demo__intro { padding: 20px 8px; gap: 16px; }
   .tile { padding: 20px; gap: 28px; }
   .tab { flex-basis: 100%; padding: 0 16px; }
 }
+/* Short laptop screens (e.g. 1366×768 with browser chrome): tighten the intro
+   so section 1 still fits in one screen with section 2 below the fold. */
+@media (max-height: 700px) and (min-width: 761px) {
+  .intro { gap: 32px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .panel, .pager span, .btn, .tab { transition: none; }
+  .eyebrow img { animation: none; }
 }
