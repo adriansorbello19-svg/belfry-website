@@ -249,10 +249,8 @@ button { font: inherit; }
   .nav { padding: 0 12px 0 20px; }
   .nav__logo img { height: 32px; }
   .nav__account { display: none; }
-  .nav__logo img { height: 28px; }
-  .nav__actions { gap: 8px; }
-  .nav .btn { padding: 8px 16px; }
-  .nav .btn span { width: auto; }
+  /* Bar CTA moves into the menu (top item, black pill) */
+  .nav__actions > .btn { display: none; }
 
   /* Mobile menu: the nav links collapse behind a toggle and open as a
      dropdown card under the bar, overlaying the hero. */
@@ -285,6 +283,12 @@ button { font: inherit; }
   .nav__links a { display: block; padding: 12px 16px; border-radius: 16px; }
   .nav__links a:hover { opacity: 1; background: rgba(255,255,255,.1); }
   .nav__menu-only { display: block; border-top: 1px solid rgba(255,255,255,.2); margin-top: 8px; padding-top: 8px; }
+  .nav__menu-cta { border-top: 0; margin: 0 0 8px; padding: 8px 8px 16px; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .nav__links .nav__menu-cta a.btn {
+    display: inline-flex; padding: 8px 24px; border-radius: var(--radius-pill); /* same 40px pill as the desktop bar CTA */
+    background: var(--belfry-black);
+  }
+  .nav__links .nav__menu-cta a.btn:hover { background: var(--belfry-black); opacity: .85; }
   .intro { gap: 32px; }
   .demo { padding: 13px; gap: 24px; }
   .demo__intro { padding: 14px 8px 0; gap: 16px; } /* 24px above + 24px gap below */
@@ -314,12 +318,6 @@ button { font: inherit; }
   .panel__copy { flex: 1 1 auto; }
   .panel__media { border-radius: 12px; }
   .panel .t-h2 { font-size: 24px; }
-}
-/* Smallest phones (<380px): keep clear space between the logo and the actions */
-/* Smallest phones (<380px): no room for logo + CTA + menu, so the bar CTA
-   drops out (the hero's Book a Demo button sits directly below). */
-@media (max-width: 379px) {
-  .nav .btn { display: none; }
 }
 /* Very short screens: tighten the intro so section 1 still fits in one screen. */
 @media (max-height: 600px) and (min-width: 761px) {
